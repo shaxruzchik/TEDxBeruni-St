@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEDxBeruni St</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0b0b0b; color: #ffffff; overflow-x: hidden; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 20px rgba(230,43,30,0.3); }
+      100% { box-shadow: 0 0 40px rgba(230,43,30,0.7); }
+    }
+
+    /* ===== HERO ===== */
+    header {
+      height: 100vh;
+      background: radial-gradient(circle at top, #1a1a1a, #000000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(230,43,30,0.25), transparent 60%);
+    }
+    header h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: #e62b1e;
+      animation: fadeUp 1.2s ease forwards;
+    }
+    header p {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 100px 10%; }
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 25px;
+      color: #e62b1e;
+      text-align: center;
+    }
+    section p { max-width: 900px; margin: auto; font-size: 1.05rem; opacity: 0.9; text-align: center; }
+
+    /* ===== GLASS CARDS ===== */
+    .cards {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 35px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.4s ease;
+      animation: fadeUp 1s ease forwards;
+    }
+    .card:hover {
+      transform: translateY(-15px) scale(1.03);
+      animation: glow 1.5s infinite alternate;
+    }
+    .card h3 { margin-bottom: 10px; color: #ffffff; }
+
+    /* ===== APPLY SECTION ===== */
+    .apply-box {
+      margin-top: 50px;
+      background: linear-gradient(135deg, #e62b1e, #ff6a5c);
+      padding: 60px;
+      border-radius: 30px;
+      text-align: center;
+      animation: fadeUp 1.2s ease forwards;
+    }
+    .apply-box p { font-size: 1.1rem; }
+    .apply-box a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 18px 45px;
+      border-radius: 40px;
+      background: #000000;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.4s ease;
+    }
+    .apply-box a:hover {
+      background: #ffffff;
+      color: #e62b1e;
+      transform: scale(1.1);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 70px 10%;
+      background: #000000;
+      text-align: center;
+    }
+    footer p { opacity: 0.8; }
+
+    /* ===== SCROLL EFFECT ===== */
+    .reveal { opacity: 0; transform: translateY(50px); transition: 1s; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>TEDxBeruni St</h1>
+    <p>Ideas Worth Spreading</p>
+  </div>
+</header>
+
+<section class="reveal">
+  <h2>What is TEDx?</h2>
+  <p>
+    TEDx is a globally recognized platform where independent events bring powerful ideas,
+    innovation, and stories to life. TEDxBeruni St aims to inspire minds, spark dialogue,
+    and empower the next generation of leaders.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Why TEDxBeruni St?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🔥 World‑Class Ideas</h3>
+      <p>Experience talks that challenge thinking and inspire change.</p>
+    </div>
+    <div class="card">
+      <h3>🤝 Elite Networking</h3>
+      <p>Meet ambitious students, speakers, and innovators.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Career Boost</h3>
+      <p>Build leadership, public speaking, and teamwork skills.</p>
+    </div>
+    <div class="card">
+      <h3>🌍 Global Platform</h3>
+      <p>Be part of a movement followed by millions worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>The TEDx Vibe</h2>
+  <p>Feel the energy, passion, and atmosphere of TEDx events around the world.</p>
+  <div class="cards">
+    <div class="card">
+      <img src="https://news.siu.edu/_assets/images/2025/03/2024-03-30-tedxsiuc-cv-8-sm.jpg" alt="TEDx stage" style="width:100%;border-radius:14px;margin-bottom:15px;">
+      <p>Powerful talks on iconic red circles</p>
+    </div>
+    <div class="card">
+      <img src="https://thatssotampa.com/wp-content/uploads/2025/03/TEDx-stock-logo-1024x576.webp" alt="Audience" style="width:100%;border-radius:14px;margin-bottom:15px;">
+      <p>Engaged audience and immersive experience</p>
+    </div>
+    <div class="card">
+      <img src="https://www.garance-et-moi.com/hubfs/Garance%20et%20moi/Images/Blog/Tedx-5-confe%CC%81rences-inspirantes-a%CC%80-voir-absolument.jpg" alt="Networking" style="width:100%;border-radius:14px;margin-bottom:15px;">
+      <p>Networking, ideas, and meaningful connections</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Join the Experience</h2>
+  <div class="card" style="text-align:center;">
+<h3>🎤 Speaker Application</h3>
+<p>Have an idea worth spreading? Apply to become a TEDxBeruni St speaker and share your story on the red circle.</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfa4EyJ1ijGjENh92D1_R6hYKtYgmoQ4s0RoSqzczQOS1wNig/viewform?usp=header" target="_blank" style="display:inline-block;margin-top:20px;padding:14px 30px;border-radius:30px;background:#e62b1e;color:#fff;text-decoration:none;font-weight:600;">Apply as Speaker</a>
+</div>
+
+
+<div class="card" style="text-align:center;">
+<h3>🧠 Team & Volunteer Application</h3>
+<p>Join the organizing team and help create an unforgettable TEDx experience behind the scenes.</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeVA99av_B_l3pp_yvzFZZOrtIHquB3VyeU8Bp7u60aRLSLhg/viewform?usp=header" target="_blank" style="display:inline-block;margin-top:20px;padding:14px 30px;border-radius:30px;background:#e62b1e;;color:#fff;text-decoration:none;font-weight:600;">Apply as Team Member</a>
+</div>
+</section>
+
+<footer class="reveal">
+  <h2>Contact</h2>
+  <p>Email: tedxberunist@gmail.com</p>
+  <p>Instagram: @tedxberunist</p>
+  <p>Samarkand, Uzbekistan</p>
+  <p style="margin-top:25px;">© 2026 TEDxBeruni St · Independently organized TED event</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
